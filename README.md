@@ -4,9 +4,9 @@ Objectif: afficher la liste de titres d'albums via une api.
 
 ## Spécifications
 
-Api minimum: 24
-Langage: Kotlin
-Implémenter un système de persistance des données
+- Api minimum: 24
+- Langage: Kotlin
+- Implémenter un système de persistance des données
 
 ### Choix d'architecture
 
