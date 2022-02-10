@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listingFragment">
+
+    <fragment
+        android:id="@+id/listingFragment"
+        android:name="fr.haumey.leboncointest.view.listing.ListingFragment"
+        android:label="ListingFragment" >
+        <action
+            android:id="@+id/action_listingFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="fr.haumey.leboncointest.view.photo.PhotoFragment"
+        android:label="PhotoFragment" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
