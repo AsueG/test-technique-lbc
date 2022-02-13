@@ -28,10 +28,15 @@ class ListingAdapter(private val listener: (Title) -> Unit) : RecyclerView.Adapt
     inner class ListingHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(inflater.inflate(R.layout.item_title, parent, false)) {
 
         private val thumbnail: ImageView = itemView.findViewById(R.id.imageViewThumbnail)
+
         private val titleName: TextView = itemView.findViewById(R.id.textViewTitleName)
+        private val albumNumber: TextView = itemView.findViewById(R.id.textViewAlbumId)
+        private val titleNumber: TextView = itemView.findViewById(R.id.textViewTitleId)
 
         fun bind (title: Title) {
             titleName.text = title.title
+            albumNumber.text = String.format(itemView.resources.getString(R.string.album_numéro_x), title.albumId)
+            titleNumber.text = "${title.id}"
 
             Picasso.get()
                 .load(title.thumbnailUrl)

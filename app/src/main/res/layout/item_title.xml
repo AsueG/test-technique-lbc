@@ -40,6 +40,30 @@
             app:layout_constraintTop_toTopOf="@+id/imageViewThumbnail"
             tools:text="accusamus beatae ad facilis cum similique qui sunt" />
 
+        <TextView
+            android:id="@+id/textViewAlbumId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewThumbnail"
+            tools:text="album n°1" />
+
+        <TextView
+            android:id="@+id/textViewTitleId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="42" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -3,9 +3,9 @@ package fr.haumey.leboncointest.model
 data class State<out T>(val status: Status, val data: T?, val message: String?) {
 
     enum class Status {
+        LOADING,
         SUCCESS,
-        ERROR,
-        LOADING
+        ERROR
     }
 
     companion object {

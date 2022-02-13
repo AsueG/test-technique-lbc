@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import fr.haumey.leboncointest.R
 import fr.haumey.leboncointest.model.State
+import fr.haumey.leboncointest.utils.hide
+import fr.haumey.leboncointest.utils.show
 import fr.haumey.leboncointest.view.photo.PhotoFragment
 import fr.haumey.leboncointest.viewmodel.ListingViewModel
 
@@ -50,15 +52,15 @@ class ListingFragment : Fragment(R.layout.fragment_listing) {
     private fun observer() {
         listingViewModel.titles.observe(viewLifecycleOwner) { state ->
             when (state.status) {
-                State.Status.LOADING -> view?.findViewById<ProgressBar>(R.id.progressBarListing)?.visibility = View.VISIBLE
+                State.Status.LOADING -> view?.findViewById<ProgressBar>(R.id.progressBarListing)?.show()
                 State.Status.SUCCESS -> {
-                    view?.findViewById<ProgressBar>(R.id.progressBarListing)?.visibility = View.GONE
+                    view?.findViewById<ProgressBar>(R.id.progressBarListing)?.hide()
 
                     state.data?.let {
                         viewAdapter.differ.submitList(it)
                     }
                 }
-                State.Status.ERROR -> view?.findViewById<ProgressBar>(R.id.progressBarListing)?.visibility = View.GONE
+                State.Status.ERROR -> view?.findViewById<ProgressBar>(R.id.progressBarListing)?.hide()
             }
         }
     }

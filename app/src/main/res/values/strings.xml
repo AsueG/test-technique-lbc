@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Leboncoin Test</string>
+
+    <string name="album_numéro_x">album n°%1$d</string>
 </resources>

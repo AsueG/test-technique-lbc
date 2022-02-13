@@ -1,5 +1,6 @@
 package fr.haumey.leboncointest.utils
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.map
@@ -23,3 +24,11 @@ fun <T, A> performOperation(databaseQuery: () -> LiveData<T>, networkCall: suspe
             emitSource(source)
         }
     }
+
+fun View.show() {
+    visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    visibility = View.GONE
+}
